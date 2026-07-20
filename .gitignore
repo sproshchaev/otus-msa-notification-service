@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# draw.io backup/temp
+*.bkp
+*.dtmp
+
+# Local notes (не для публикации)
+/local/
+*.local.md

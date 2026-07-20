@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="C4-Context" id="c4-context">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="mono" value="Монолит&#10;[внешняя система]&#10;бизнес-события" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" value="CRM&#10;[внешняя система]&#10;клиентские события" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mkt" value="Маркетинговая платформа&#10;[внешняя система]&#10;массовые рассылки (пики)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="580" y="60" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ns" value="Сервис уведомлений&#10;[Система в фокусе]&#10;принимает заявки и гарантированно&#10;доставляет письма/SMS без потерь и дублей" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="330" width="280" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="smtp" value="SMTP-сервер&#10;[внешняя система]&#10;email; в демо — песочница" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="220" y="640" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sms" value="SMS-провайдер&#10;[внешняя система]&#10;в MVP — заглушка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="480" y="640" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="client" value="Клиент&#10;[Получатель]&#10;человек, получает письмо/SMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427b;strokeColor=#052e56;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="350" y="900" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="POST /notifications&#10;(HTTPS/JSON, токен, ключ идемпотентности)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="mono" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="POST /notifications" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="crm" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="POST /notifications&#10;(пиковые всплески)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="mkt" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="отправка email (SMTP)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="ns" target="smtp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="отправка SMS (HTTP API)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="ns" target="sms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="письмо" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="smtp" target="client">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="SMS" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="sms" target="client">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
