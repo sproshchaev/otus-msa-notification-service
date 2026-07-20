@@ -1,75 +1,51 @@
 <mxfile host="app.diagrams.net" type="device">
   <diagram name="C4-Container" id="c4-container">
-    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
         <mxCell id="senders" value="Внутренние системы-отправители&#10;[внешние]&#10;монолит, CRM, маркетинг" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="220" height="70" as="geometry" />
+          <mxGeometry x="60" y="40" width="240" height="70" as="geometry" />
         </mxCell>
 
-        <mxCell id="boundary" value="Сервис уведомлений" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#0b4884;fontColor=#0b4884;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="150" width="1000" height="560" as="geometry" />
+        <mxCell id="boundary" value="Сервис уведомлений (система)" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#0b4884;fontColor=#0b4884;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="720" height="360" as="geometry" />
         </mxCell>
 
-        <mxCell id="api" value="REST API&#10;[приложение]&#10;приём заявок, аутентификация,&#10;ключ идемпотентности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="80" y="220" width="200" height="90" as="geometry" />
+        <mxCell id="app" value="notification-service&#10;[приложение, Spring Boot]&#10;приём, диспетчеризация, доставка;&#10;stateless, работает в N копиях" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="230" width="220" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="db" value="База данных&#10;[PostgreSQL]&#10;заявки + история статусов" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="120" y="400" width="140" height="100" as="geometry" />
+        <mxCell id="db" value="PostgreSQL&#10;[база данных]&#10;заявки, история статусов,&#10;записи DLQ, маршрутизация" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="90" y="380" width="180" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="q" value="Очередь to-dispatch&#10;[брокер очередей]&#10;буфер + сглаживание пиков" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="420" y="225" width="200" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="disp" value="Диспетчер&#10;[воркер]&#10;выбор провайдера по каналу, ретраи" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="420" y="400" width="200" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="dlq" value="DLQ&#10;[очередь]&#10;недоставленные, 48 ч" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="420" y="580" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="smtpad" value="SMTP-адаптер&#10;[приложение]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="760" y="380" width="170" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="smsad" value="SMS-адаптер&#10;[приложение]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="760" y="470" width="170" height="60" as="geometry" />
+        <mxCell id="mq" value="RabbitMQ&#10;[брокер сообщений]&#10;очередь диспетчера,&#10;retry, dead-letter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="540" y="385" width="190" height="100" as="geometry" />
         </mxCell>
 
         <mxCell id="smtp" value="SMTP-сервер&#10;[внешний]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="760" y="760" width="170" height="60" as="geometry" />
+          <mxGeometry x="820" y="230" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="sms" value="SMS-провайдер&#10;[внешний]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="760" y="840" width="170" height="60" as="geometry" />
+          <mxGeometry x="820" y="320" width="150" height="60" as="geometry" />
         </mxCell>
 
-        <mxCell id="c1" value="POST /notifications&#10;(HTTPS/JSON, токен)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="senders" target="api">
+        <mxCell id="c1" value="POST /notifications&#10;(HTTPS/JSON, токен)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="senders" target="app">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c2" value="запись заявки (1 транзакция)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="api" target="db">
+        <mxCell id="c2" value="заявка + статусы&#10;(1 транзакция)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="app" target="db">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c3" value="надёжная публикация" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="api" target="q">
+        <mxCell id="c3" value="публикация (publish)" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="app" target="mq">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c4" value="чтение сообщений" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="q" target="disp">
+        <mxCell id="c4" value="на обработку (consume)" style="endArrow=block;html=1;fontSize=10;dashed=1;exitX=0.4;exitY=1;entryX=0.4;entryY=0;" edge="1" parent="1" source="mq" target="app">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c5" value="после 5 ретраев" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="disp" target="dlq">
+        <mxCell id="c5" value="email через SMTP" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="app" target="smtp">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c6" value="обновление статуса" style="endArrow=block;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="disp" target="db">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c7" value="канал = email" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="disp" target="smtpad">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c8" value="канал = sms" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="disp" target="smsad">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c9" value="SMTP" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="smtpad" target="smtp">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c10" value="HTTP API" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="smsad" target="sms">
+        <mxCell id="c6" value="SMS через HTTP API" style="endArrow=block;html=1;fontSize=10;" edge="1" parent="1" source="app" target="sms">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
