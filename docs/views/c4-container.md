@@ -14,8 +14,10 @@ flowchart TB
         mq["RabbitMQ<br/>[брокер сообщений]<br/>очередь диспетчера, retry,<br/>dead-letter"]
     end
 
-    smtp["SMTP-сервер<br/>(внешний)"]
-    sms["SMS-провайдер<br/>(внешний)"]
+    subgraph providers["Внешние провайдеры"]
+        smtp["SMTP-сервер<br/>(внешний)"]
+        sms["SMS-провайдер<br/>(внешний)"]
+    end
 
     senders -->|"POST /notifications<br/>(HTTPS/JSON, токен)"| app
     app -->|"заявка + статусы<br/>(1 транзакция)"| db

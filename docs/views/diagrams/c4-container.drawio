@@ -23,8 +23,11 @@
           <mxGeometry x="540" y="385" width="190" height="100" as="geometry" />
         </mxCell>
 
+        <mxCell id="providers" value="Внешние провайдеры" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#6b6b6b;fontColor=#6b6b6b;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="200" width="190" height="200" as="geometry" />
+        </mxCell>
         <mxCell id="smtp" value="SMTP-сервер&#10;[внешний]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="820" y="230" width="150" height="60" as="geometry" />
+          <mxGeometry x="820" y="240" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="sms" value="SMS-провайдер&#10;[внешний]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="820" y="320" width="150" height="60" as="geometry" />
