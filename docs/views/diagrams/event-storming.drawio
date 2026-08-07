@@ -1,0 +1,146 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="Event-Storming" id="event-storming">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Event Storming — путь покупки (время слева направо)" style="text;html=1;whiteSpace=wrap;align=left;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lblAct" value="акторы" style="text;html=1;align=right;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lblCmd" value="команды" style="text;html=1;align=right;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="0" y="190" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lblEvt" value="события" style="text;html=1;align=right;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="0" y="300" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lblPol" value="политики" style="text;html=1;align=right;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="0" y="510" width="60" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" value="Покупатель" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;rotation=-2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="Оператор склада" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;rotation=2;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="80" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Добавить в корзину" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;rotation=-1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="180" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Оформить заказ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Оплатить" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;rotation=-1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="180" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Отгрузить заказ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="180" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="Товар просмотрен" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=-1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Товар добавлен в корзину" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Заказ оформлен" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=-2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Товар зарезервирован" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Оплата проведена" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=-1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="Заказ подтверждён" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=2;" vertex="1" parent="1">
+          <mxGeometry x="910" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="Заказ отгружен" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=-1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="Заказ доставлен" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="290" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e5" value="Резерв снят по таймауту" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="Оплата отклонена" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=-2;" vertex="1" parent="1">
+          <mxGeometry x="740" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="Заказ отменён" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;rotation=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="когда заказ оформлен&#10;→ зарезервировать товар" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;rotation=-1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="когда резерв не оплачен 30 мин&#10;→ снять резерв" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;rotation=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="580" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="когда оплата проведена&#10;→ подтвердить заказ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;rotation=-1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="когда заказ подтверждён&#10;→ поставить в отгрузку" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;rotation=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="940" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="psp" value="Платёжный провайдер&#10;[внешняя система]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="740" y="90" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="оплата прошла, а резерв уже снят —&#10;компенсируем или разбираем руками?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;rotation=-2;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="610" width="230" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fe1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e1" target="c1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="c1" target="e2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="c2" target="e3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e3" target="p1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p1" target="e4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e4" target="p2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p2" target="e5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e5" target="e9"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;" edge="1" parent="1" source="c3" target="psp"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;" edge="1" parent="1" source="psp" target="e6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;" edge="1" parent="1" source="psp" target="e7"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e7" target="e9"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e6" target="p3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p3" target="e8"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e8" target="p4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="p4" target="c4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="c4" target="e10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="e10" target="e11"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="a1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="a1" target="c3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="a2" target="c4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=none;strokeColor=#B85450;" edge="1" parent="1" source="h1" target="e5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="fe23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=none;strokeColor=#B85450;" edge="1" parent="1" source="h1" target="e6"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="legendTitle" value="Палитра" style="text;html=1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lg1" value="доменное событие" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB570;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="505" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2" value="команда" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="545" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lg3" value="актор" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="585" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lg4" value="политика / внешняя система" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCE5;strokeColor=#B5739D;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="625" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lg5" value="hotspot — надо договориться" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="665" width="150" height="35" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
