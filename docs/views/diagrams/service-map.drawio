@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="Service-Map" id="service-map">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="user" value="Покупатель" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427b;strokeColor=#052e56;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="shop" value="Интернет-магазин" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="1010" height="450" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cat" value="Каталог&#10;supporting&#10;владеет: товары, категории, индекс" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rec" value="Рекомендации (core)&#10;владеет: история просмотров, модель" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wh" value="Склад&#10;supporting&#10;владеет: остатки, резервы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ord" value="Заказы (core)&#10;владеет: корзины, заказы, позиции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" value="Оплата&#10;generic&#10;владеет: платежи, возвраты" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85bbf0;strokeColor=#5d82a8;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="del" value="Доставка&#10;supporting&#10;владеет: отгрузки, маршруты" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ns" value="Уведомления&#10;наш сквозной сервис&#10;владеет: заявки, статусы, шаблоны" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c51b8a;strokeColor=#8f1263;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="300" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Авторизация&#10;generic&#10;владеет: учётки, токены" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85bbf0;strokeColor=#5d82a8;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="760" y="450" width="230" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="prov" value="Внешние провайдеры" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="610" width="590" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="psp" value="Платёжный провайдер" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="420" y="650" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="smtp" value="SMTP-сервер" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="630" y="650" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="sms" value="SMS-провайдер" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6b6b6b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="810" y="650" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="контракт: карточка товара" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="ord" target="cat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="контракт: проверить и зарезервировать" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="ord" target="wh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="контракт: списать оплату" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="ord" target="pay">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="контракт: доступность" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="cat" target="wh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="событие: товар просмотрен" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="cat" target="rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="контракт: подборка" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="rec" target="cat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e7" value="событие: заказ оформлен" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="ord" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="событие: оплата прошла" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="pay" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="событие: заказ отгружен" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="del" target="ns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="событие: заказ оформлен" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=10;" edge="1" parent="1" source="ord" target="del">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e11" value="HTTP API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="pay" target="psp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="SMTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="ns" target="smtp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="HTTP API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="ns" target="sms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="user" target="cat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="user" target="ord">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend" value="Сплошная стрелка — синхронный вызов по контракту&#10;Пунктир — асинхронное событие&#10;Цвет: тёмно-синий core, светлее supporting, светлый generic, розовый — наш сервис" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="750" width="620" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
