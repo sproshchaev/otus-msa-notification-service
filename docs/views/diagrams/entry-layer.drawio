@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="Entry-Layer" id="entry-layer">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="web" value="Веб" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mob" value="Мобильное приложение" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adm" value="Админка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bweb" value="Web BFF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bmob" value="Mobile BFF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="badm" value="Admin BFF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="480" y="150" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="gw" value="Шлюз: общий уровень&#10;маршрутизация · TLS · токен · лимиты" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="560" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="services" value="Сервисы магазина" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="600" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" value="Каталог" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="stock" value="Склад" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="230" y="420" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ord" value="Заказы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="380" y="420" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" value="Оплата" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dlv" value="Доставка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="495" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Авторизация" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="230" y="495" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ntf" value="Уведомления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C51B8A;strokeColor=#C51B8A;fontColor=#FFFFFF;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="380" y="495" width="130" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="web" target="bweb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="mob" target="bmob"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="adm" target="badm"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="bweb" target="gw"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="bmob" target="gw"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="badm" target="gw"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;" edge="1" parent="1" source="gw" target="services"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
