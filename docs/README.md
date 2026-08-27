@@ -20,6 +20,7 @@
 14. [`views/entry-layer.md`](views/entry-layer.md) — схема входа: клиент, шлюз, BFF, сервисы.
 15. [`10-cache-points.md`](10-cache-points.md) — данные системы, размеченные по точкам кеширования.
 16. [`11-invalidation-strategy.md`](11-invalidation-strategy.md) — стратегии инвалидации и что уточнить у бэкенда.
+17. [`12-interaction-model.md`](12-interaction-model.md) — модели взаимодействия: sync/async по сценариям, оркестрация и хореография.
 17. [`views/cache-map.md`](views/cache-map.md) — путь запроса и точки, где ответ оседает.
 18. [`adr/`](adr/) — записи решений (ADR).
 
@@ -115,5 +116,6 @@
 | Разбиение системы (building blocks) | `04-capabilities.md`, `05-service-boundaries.md`, `06-cohesion-coupling.md`, `07-event-storming.md` |
 | Риски и компромиссы | `03-tradeoffs.md` |
 | Концепции: кросс-функциональные решения | `10-cache-points.md`, `11-invalidation-strategy.md` |
+| Концепции: взаимодействие сервисов | `12-interaction-model.md` |
 
 Раздел про разбиение появился после третьего вебинара и дополнился после четвёртого — ровно так, как я и обещал: репозиторий растёт вместе с проектом, а не стоит готовым памятником. Дальше по курсу добавятся взаимодействие сервисов и тактики работы с атрибутами качества.
