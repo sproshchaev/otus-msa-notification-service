@@ -10,6 +10,7 @@ ADR — это короткая запись про одно архитекту�
 | [0002](0002-notifications-as-separate-service.md) | Уведомления — отдельный сервис, издатели общаются событиями | Accepted |
 | [0003](0003-entry-layer-gateway-and-bff.md) | Слой входа: общий шлюз и BFF по классам клиентов | Accepted |
 | [0004](0004-notification-history-not-cached.md) | Историю уведомлений не кешируем в общем кеше | Accepted |
+| [0005](0005-access-check-in-service.md) | Проверку принадлежности заявки делает сервис уведомлений | Accepted |
 
 ## Что означают статусы
 
