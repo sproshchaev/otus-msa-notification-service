@@ -136,7 +136,15 @@
 
 📋 [Что требовалось и чем закрыто](docs/README.md#дз-вебинара-17) — базовые объекты Kubernetes: что у сервиса станет Deployment и Service, как устроен вход снаружи, где живут настройки и секреты и что мешает сервису быть stateless. Задание неофициальное, отдельного слота сдачи у него нет.
 
-Разбор публикуется после занятия — этот раздел стоит здесь заранее, чтобы ссылка со слайда вела в нужное место.
+| Артефакт | Файл |
+|----------|------|
+| Части сервиса, разложенные на Deployment и Service | [`docs/14-kubernetes-objects.md`](docs/14-kubernetes-objects.md#шаг-1-что-станет-deployment-а-что-service) |
+| Схема входа: домен, пути, Ingress, шлюз и сервисы | [`docs/14-kubernetes-objects.md`](docs/14-kubernetes-objects.md#шаг-2-как-устроен-вход-снаружи) |
+| Настройки и секреты, разложенные по ConfigMap и Secret | [`docs/14-kubernetes-objects.md`](docs/14-kubernetes-objects.md#шаг-3-настройки-и-секреты) |
+| Состояние в памяти и куда оно выносится | [`docs/14-kubernetes-objects.md`](docs/14-kubernetes-objects.md#шаг-4-что-мешает-быть-stateless) |
+| Решение о разделении приёма и обработки | [`docs/adr/0006-split-api-and-worker-deployments.md`](docs/adr/0006-split-api-and-worker-deployments.md) |
+
+Если делаете это задание у себя — в конце [`14-kubernetes-objects.md`](docs/14-kubernetes-objects.md#как-оформить-это-у-себя) написано по шагам, что и в каком виде оформлять.
 
 ## Как повторить это у себя
 

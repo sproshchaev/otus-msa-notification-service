@@ -11,6 +11,7 @@ ADR — это короткая запись про одно архитекту�
 | [0003](0003-entry-layer-gateway-and-bff.md) | Слой входа: общий шлюз и BFF по классам клиентов | Accepted |
 | [0004](0004-notification-history-not-cached.md) | Историю уведомлений не кешируем в общем кеше | Accepted |
 | [0005](0005-access-check-in-service.md) | Проверку принадлежности заявки делает сервис уведомлений | Accepted |
+| [0006](0006-split-api-and-worker-deployments.md) | Приём по HTTP и обработка событий — два Deployment из одного образа | Accepted |
 
 ## Что означают статусы
 
