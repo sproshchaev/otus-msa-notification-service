@@ -172,6 +172,21 @@
 
 Если делаете это задание у себя — в конце [`16-resilience-tactics.md`](docs/16-resilience-tactics.md#как-оформить-это-у-себя) написано по шагам, что и в каком виде оформлять.
 
+## ДЗ вебинара 20
+
+📋 [Что требовалось и чем закрыто](docs/README.md#дз-вебинара-20) — план observability: метрики по моделям RED и Four Golden Signals, actionable-алерты с порогом и первым шагом, бюджет ошибок и эскиз дашборда. Это вторая половина **ДЗ-4**, и вместе с тактиками из девятнадцатого занятия задание сдаётся целиком, срок 29.09.
+
+| Артефакт | Файл |
+|----------|------|
+| Тактики отказоустойчивости под типы сбоев | [`docs/16-resilience-tactics.md`](docs/16-resilience-tactics.md#шаг-1-типы-сбоев-и-тактика-под-каждый) |
+| Метрики по моделям, с обоснованием выбора модели | [`docs/17-observability-plan.md`](docs/17-observability-plan.md#шаг-2-какие-метрики-и-по-какой-модели) |
+| Три алерта с порогом, окном и первым шагом дежурного | [`docs/17-observability-plan.md`](docs/17-observability-plan.md#шаг-3-алерты) |
+| Бюджет ошибок и эскиз дашборда | [`docs/17-observability-plan.md`](docs/17-observability-plan.md#шаг-4-бюджет-ошибок-и-дашборд) |
+
+Здесь же закрыта дыра, которую [задание девятнадцатого занятия нашло и оставило на потом](docs/16-resilience-tactics.md#что-задание-поймало-в-уже-принятых-решениях): у очереди недоставленных сообщений не было меры, и теперь у неё есть порог.
+
+Если делаете это задание у себя — в конце [`17-observability-plan.md`](docs/17-observability-plan.md#как-оформить-это-у-себя) написано по шагам, что и в каком виде оформлять.
+
 ## Как повторить это у себя
 
 Смысл упражнения в том, чтобы вы прошли ту же дорогу на своём проекте. Порядок такой:
@@ -197,17 +212,33 @@
     ├── 05-service-boundaries.md    границы сервисов и владение данными
     ├── 06-cohesion-coupling.md     сплочённость, связанность, DIP
     ├── 07-event-storming.md        доска событий, контексты, сверка границ
+    ├── 08-clients-and-scenarios.md клиенты сервиса и их сценарии
+    ├── 09-entry-layer.md           входной слой: шлюз и BFF
+    ├── 10-cache-points.md          точки кеширования по пути запроса
+    ├── 11-invalidation-strategy.md стратегия инвалидации кеша
+    ├── 12-interaction-model.md     синхронно или асинхронно по каждому сценарию
+    ├── 13-auth-model.md            аутентификация и авторизация
+    ├── 14-kubernetes-objects.md    раскладка сервиса на объекты кластера
+    ├── 15-architecture-review.md   разбор архитектуры по методу семинара
+    ├── 16-resilience-tactics.md    тактики отказоустойчивости по типам сбоя
+    ├── 17-observability-plan.md    метрики, алерты, бюджет ошибок и дашборд
     ├── views/                      представления
     │   ├── c4-context.md
     │   ├── c4-container.md
     │   ├── service-map.md
     │   ├── context-map.md
+    │   ├── cache-map.md
+    │   ├── entry-layer.md
     │   └── diagrams/               исходники .drawio и экспорт .png
     └── adr/                        записи решений
         ├── README.md
         ├── template.md
         ├── 0001-async-delivery-via-queue.md
-        └── 0002-notifications-as-separate-service.md
+        ├── 0002-notifications-as-separate-service.md
+        ├── 0003-entry-layer-gateway-and-bff.md
+        ├── 0004-notification-history-not-cached.md
+        ├── 0005-access-check-in-service.md
+        └── 0006-split-api-and-worker-deployments.md
 ```
 
 ## Как читать диаграммы
