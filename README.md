@@ -212,17 +212,33 @@
     ├── 05-service-boundaries.md    границы сервисов и владение данными
     ├── 06-cohesion-coupling.md     сплочённость, связанность, DIP
     ├── 07-event-storming.md        доска событий, контексты, сверка границ
+    ├── 08-clients-and-scenarios.md клиенты сервиса и их сценарии
+    ├── 09-entry-layer.md           входной слой: шлюз и BFF
+    ├── 10-cache-points.md          точки кеширования по пути запроса
+    ├── 11-invalidation-strategy.md стратегия инвалидации кеша
+    ├── 12-interaction-model.md     синхронно или асинхронно по каждому сценарию
+    ├── 13-auth-model.md            аутентификация и авторизация
+    ├── 14-kubernetes-objects.md    раскладка сервиса на объекты кластера
+    ├── 15-architecture-review.md   разбор архитектуры по методу семинара
+    ├── 16-resilience-tactics.md    тактики отказоустойчивости по типам сбоя
+    ├── 17-observability-plan.md    метрики, алерты, бюджет ошибок и дашборд
     ├── views/                      представления
     │   ├── c4-context.md
     │   ├── c4-container.md
     │   ├── service-map.md
     │   ├── context-map.md
+    │   ├── cache-map.md
+    │   ├── entry-layer.md
     │   └── diagrams/               исходники .drawio и экспорт .png
     └── adr/                        записи решений
         ├── README.md
         ├── template.md
         ├── 0001-async-delivery-via-queue.md
-        └── 0002-notifications-as-separate-service.md
+        ├── 0002-notifications-as-separate-service.md
+        ├── 0003-entry-layer-gateway-and-bff.md
+        ├── 0004-notification-history-not-cached.md
+        ├── 0005-access-check-in-service.md
+        └── 0006-split-api-and-worker-deployments.md
 ```
 
 ## Как читать диаграммы
