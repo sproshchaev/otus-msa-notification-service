@@ -212,6 +212,11 @@
 | Цена расхождения и цена отказа по каждому набору | [`docs/19-consistency-model.md`](docs/19-consistency-model.md#шаг-2-цена-расхождения-и-цена-отказа) |
 | Окно допустимого расхождения числом | [`docs/19-consistency-model.md`](docs/19-consistency-model.md#шаг-3-окно-свежести) |
 | Модель под каждый набор и обоснование выбора | [`docs/19-consistency-model.md`](docs/19-consistency-model.md#шаг-4-модель-под-каждый-набор) |
+| Решение о фиксации версии шаблона в задании | [`docs/adr/0007-template-version-pinned-in-job.md`](docs/adr/0007-template-version-pinned-in-job.md) |
+
+Упражнение подсветило [три места в уже принятых решениях](docs/19-consistency-model.md#что-задание-поймало-в-уже-принятых-решениях): требование к согласованности ключей идемпотентности не было записано нигде, статус заявки не имел read-your-writes, а шаблон выбирался в момент отправки — из-за чего одна рассылка могла уехать двумя текстами.
+
+Если делаете это задание у себя — в конце [`19-consistency-model.md`](docs/19-consistency-model.md#как-оформить-это-у-себя) написано по шагам, что и в каком виде оформлять.
 
 ## Как повторить это у себя
 
@@ -249,6 +254,7 @@
     ├── 16-resilience-tactics.md    тактики отказоустойчивости по типам сбоя
     ├── 17-observability-plan.md    метрики, алерты, бюджет ошибок и дашборд
     ├── 18-modifiability-scenarios.md  сценарии изменений, локальность и точки расширения
+    ├── 19-consistency-model.md      наборы данных, окна свежести и модель согласованности
     ├── views/                      представления
     │   ├── c4-context.md
     │   ├── c4-container.md
@@ -265,7 +271,8 @@
         ├── 0003-entry-layer-gateway-and-bff.md
         ├── 0004-notification-history-not-cached.md
         ├── 0005-access-check-in-service.md
-        └── 0006-split-api-and-worker-deployments.md
+        ├── 0006-split-api-and-worker-deployments.md
+        └── 0007-template-version-pinned-in-job.md
 ```
 
 ## Как читать диаграммы

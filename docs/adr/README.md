@@ -12,6 +12,7 @@ ADR — это короткая запись про одно архитекту�
 | [0004](0004-notification-history-not-cached.md) | Историю уведомлений не кешируем в общем кеше | Accepted |
 | [0005](0005-access-check-in-service.md) | Проверку принадлежности заявки делает сервис уведомлений | Accepted |
 | [0006](0006-split-api-and-worker-deployments.md) | Приём по HTTP и обработка событий — два Deployment из одного образа | Accepted |
+| [0007](0007-template-version-pinned-in-job.md) | Версия шаблона фиксируется в задании при постановке | Accepted |
 
 ## Что означают статусы
 
