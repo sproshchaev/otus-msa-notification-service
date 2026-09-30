@@ -284,6 +284,9 @@
     ├── 17-observability-plan.md    метрики, алерты, бюджет ошибок и дашборд
     ├── 18-modifiability-scenarios.md  сценарии изменений, локальность и точки расширения
     ├── 19-consistency-model.md      наборы данных, окна свежести и модель согласованности
+    ├── 20-server-cache-strategy.md  серверная кеш-стратегия по наборам данных
+    ├── 21-data-scaling.md           хранилища, шарды и реплики по наборам данных
+    ├── 22-final-solution.md         итоговое архитектурное решение
     ├── views/                      представления
     │   ├── c4-context.md
     │   ├── c4-container.md
@@ -301,7 +304,8 @@
         ├── 0004-notification-history-not-cached.md
         ├── 0005-access-check-in-service.md
         ├── 0006-split-api-and-worker-deployments.md
-        └── 0007-template-version-pinned-in-job.md
+        ├── 0007-template-version-pinned-in-job.md
+        └── 0008-requests-single-db-shard-ready-id.md
 ```
 
 ## Как читать диаграммы
